@@ -22,3 +22,21 @@
     font-family: 'Trap', sans-serif;
   }
 }
+
+.corner-white::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+}
+.top-left-corner::after {
+  top: 0;
+  left: 0;
+  border-radius: 0 0 20px 0;
+}
+.bottom-right-corner::after {
+  bottom: 0;
+  right: 0;
+  border-radius: 0 0 20px 0;
+}

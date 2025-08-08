@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 import { footerLinks, socialLinks } from "./footerData";
 import type { JSX } from "react";
+import { Link } from "react-router-dom";
 
 
 const iconMap: Record<string, JSX.Element> = {
@@ -12,7 +13,7 @@ const iconMap: Record<string, JSX.Element> = {
 
 export default function Footer() {
     return (
-        <footer className="my-8">
+        <footer className="py-8">
             <div className="mx-8 px-8 py-10 bg-[#ECEFF3] rounded-4xl">
                 {/* Top */}
                 <div className="grid grid-cols-2 md:grid-cols-6 gap-8 w-full">
@@ -31,7 +32,7 @@ export default function Footer() {
                                         key={link.name}
                                         className="text-gray-600 hover:text-violet-500 transition"
                                     >
-                                        <a href={link.route}>{link.name}</a>
+                                        <Link to={link.route}>{link.name}</Link>
                                     </li>
                                 ))}
                             </ul>
@@ -57,9 +58,9 @@ export default function Footer() {
                     <p className="text-2xl">
                         © 2025 ASAN AI HUB. All rights reserved.
                     </p>
-                    <a href="#" className="text-2xl hover:text-violet-500">
+                    <Link to="javascript:void(0)" className="text-2xl hover:text-violet-500">
                         Terms of Services
-                    </a>
+                    </Link>
                 </div>
             </div>
         </footer>

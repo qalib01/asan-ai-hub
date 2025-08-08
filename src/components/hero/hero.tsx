@@ -3,7 +3,7 @@ import { ArrowRight, Clock4 } from "lucide-react";
 
 export default function HeroSection() {
     return (
-        <section className="mx-8 mt-12 flex flex-col gap-8">
+        <section className="my-12 flex flex-col gap-8">
             <div className="w-full h-72 rounded-4xl overflow-hidden relative">
                 <img src="/media/images/handshake.jpg" className="object-cover w-full h-full" />
                 <div className="absolute bottom-6 right-6">

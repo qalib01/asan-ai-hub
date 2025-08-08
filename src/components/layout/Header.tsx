@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X, Search } from "lucide-react";
 import { navLinks } from "./headerData";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -9,20 +10,20 @@ const Header: React.FC = () => {
     return (
         <header className="mx-8">
             <div className="containex flex items-center justify-between py-10">
-                <a
+                <Link
                     className="text-[40px] font-bold text-violet-500"
-                    href={'/'}
-                >AI Hub</a>
+                    to={'/'}
+                >AI Hub</Link>
 
-                <nav className="hidden md:flex space-x-6 text-base font-medium text-black">
+                <nav className="hidden md:flex space-x-6 font-medium text-black">
                     {navLinks.map((link, idx) => (
-                        <a
+                        <Link
                             key={idx}
-                            href={link.route}
+                            to={link.route}
                             className="hover:text-violet-500 font-bolder transition-colors"
                         >
                             {link.name}
-                        </a>
+                        </Link>
                     ))}
                 </nav>
 
@@ -50,13 +51,13 @@ const Header: React.FC = () => {
                 <div className="md:hidden bg-white shadow-sm">
                     <nav className="flex flex-col px-4 py-2 space-y-3">
                         {navLinks.map((link, idx) => (
-                            <a
+                            <Link
                                 key={idx}
-                                href={link.route}
+                                to={link.route}
                                 className="hover:text-violet-500 transition-colors"
                             >
                                 {link.name}
-                            </a>
+                            </Link>
                         ))}
 
                         <div className="flex items-center space-x-3 pt-4">
