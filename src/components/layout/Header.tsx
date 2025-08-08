@@ -1,38 +1,12 @@
 import React, { useState } from "react";
 import { Menu, X, Search } from "lucide-react";
+import { navLinks } from "./headerData";
 
 const Header: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const navLinks = [
-        {
-            name: 'About us',
-            route: '/about'
-        },
-        {
-            name: 'Challenges & startups',
-            route: '/challenges'
-        },
-        {
-            name: 'Research',
-            route: '/research'
-        },
-        {
-            name: 'Courses',
-            route: '/courses'
-        },
-        {
-            name: 'Partners',
-            route: '/partners'
-        },
-        {
-            name: 'Media',
-            route: '/media'
-        },
-    ];
-
     return (
-        <header className="w-full bg-white shadow-sm">
+        <header className="w-full bg-white">
             <div className="container mx-auto flex items-center justify-between py-4 px-4">
                 {/* Logo */}
                 <a
