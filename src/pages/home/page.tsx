@@ -2,6 +2,7 @@ import ActivityCard from "../../components/card/Activity";
 import ChallengeCard from "../../components/card/Challenge";
 import CourseCard from "../../components/card/Course";
 import HeroSection from "../../components/hero/Hero";
+import GetInTouch from "../../components/section/getInTouch";
 import PartnersSection from "../../components/section/partnersSection";
 import SimpleSection from "../../components/section/simpleSection";
 
@@ -31,6 +32,7 @@ const Home = () => {
                 }
             </SimpleSection>
             <PartnersSection title="We have partnered with..." />
+            <GetInTouch />
         </>
     )
 }
