@@ -4,7 +4,7 @@ export const navLinks = [
         route: '/about'
     },
     {
-        name: 'Challenges & startups',
+        name: 'Startups',
         route: '/challenges'
     },
     {

@@ -15,8 +15,8 @@ export default function HeroSection() {
             </div>
             <div className="flex flex-col lg:flex-row justify-between items-start">
                 <div className="flex-1 space-y-8">
-                    <h1 className="text-7xl font-bold leading-tight">
-                        Protect time <br /> Learn more
+                    <h1 className="text-4xl font-semibold leading-tight">
+                        Your platform for open innovation, world-class training, and a vibrant research community
                     </h1>
 
                     <div className="grid gap-8 relative border border-gray-200 p-4 rounded-4xl w-[330px] h-[230px] shadow-md bg-gray-100 overflow-hidden">

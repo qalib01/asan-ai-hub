@@ -15,7 +15,7 @@ const ChallengeCard = ({ title, description, img }: PageProp) => {
                     <button className="w-15 h-15 rounded-full bg-violet-500 flex items-center justify-center text-white cursor-pointer">
                         <Clipboard size={24} />
                     </button>
-                    <button className="text-sm font-medium rounded-full text-xl border-1 border-gray-400 h-15 px-8 cursor-pointer">Last Challenge</button>
+                    <button className="font-medium rounded-full text-xl border-1 border-gray-400 h-15 px-8 cursor-pointer">Last Challenge</button>
                 </div>
 
                 <div className="flex gap-4 flex-col w-80">
