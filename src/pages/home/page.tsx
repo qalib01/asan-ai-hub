@@ -1,10 +1,11 @@
-import ActivityCard from "../../components/card/Activity";
-import ChallengeCard from "../../components/card/Challenge";
-import CourseCard from "../../components/card/Course";
-import HeroSection from "../../components/hero/Hero";
+import ActivityCard from "../../components/card/activity";
+import ChallengeCard from "../../components/card/challenge";
+import CourseCard from "../../components/card/course";
+import HeroSection from "../../components/hero/hero";
 import GetInTouch from "../../components/section/getInTouch";
 import PartnersSection from "../../components/section/partnersSection";
 import SimpleSection from "../../components/section/simpleSection";
+import Subscribe from "../../components/section/subscribe";
 
 const Home = () => {
     return (
@@ -32,6 +33,7 @@ const Home = () => {
                 }
             </SimpleSection>
             <PartnersSection title="We have partnered with..." />
+            <Subscribe />
             <GetInTouch />
         </>
     )
