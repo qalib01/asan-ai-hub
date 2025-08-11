@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="flex flex-col justify-between h-screen">
       <Header />
-      <div className="mx-8">
+      <div className="mx-2 md:mx-8">
         <Outlet />
       </div>
       <Footer />

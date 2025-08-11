@@ -13,7 +13,7 @@ const iconMap: Record<string, JSX.Element> = {
 
 export default function Footer() {
     return (
-        <footer className="py-8">
+        <footer className="pb-8 pt-20">
             <div className="mx-8 px-8 py-10 bg-[#ECEFF3] rounded-4xl">
                 {/* Top */}
                 <div className="grid grid-cols-2 md:grid-cols-6 gap-8 w-full">

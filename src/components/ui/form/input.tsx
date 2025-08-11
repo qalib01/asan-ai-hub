@@ -32,7 +32,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
                 {!animated && (
                     <label
                         htmlFor={placeholder}
-                        className={'cursor-text transition-all transform text-sm font-medium origin-left text-slate-400'}
+                        className={'cursor-text transition-all transform text-sm font-medium origin-left'}
                     >
                         {placeholder}
                     </label>
@@ -41,7 +41,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
                 <input
                     ref={ref}
                     className={cn(className,
-                        `peer relative w-full bg-white text-slate-700 text-sm border rounded-full px-3 py-2 placeholder:text-gray-400 transition duration-300 focus:outline-none shadow-sm focus:shadow ${type === 'password' ? 'pr-[40px]' : ''} ${error ? 'border-red-700 focus:border-red-700' : ' placeholder-transparent border-slate-200 focus:border-slate-400 hover:border-slate-400'}`
+                        `peer relative w-full bg-white text-sm text-slate-700 text-sm border rounded-full px-4 py-3 placeholder:text-gray-400 transition duration-300 focus:outline-none shadow-sm focus:shadow ${type === 'password' ? 'pr-[40px]' : ''} ${error ? 'border-red-700 focus:border-red-700' : ' placeholder-transparent border-slate-200 focus:border-slate-400 hover:border-slate-400'}`
                     )}
                     type={showPassword ? 'text' : type}
                     onChange={handleChange}

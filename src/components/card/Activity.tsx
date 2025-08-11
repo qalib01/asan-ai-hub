@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import ArrowButton from "../ui/buttons/arrow";
 
 interface PageProp {
     title: string;
@@ -13,9 +13,7 @@ const ActivityCard = ({ title, img }: PageProp) => {
                     src={img}
                     className="aspect-square rounded-4xl object-cover"
                 />
-                <div className="absolute top-0 right-0 bg-violet-500 rounded-full p-4 z-5">
-                    <ArrowUpRight size={32} color="white" />
-                </div>
+                <ArrowButton position="top-right" />
                 <div className="bg-white h-20 w-20 rounded-bl-4xl absolute top-0 right-0 z-4" />
                 <div className="bg-transparet h-20 w-20 rounded-br-4xl absolute top-[80px] right-0 z-4 corner-white top-right-corner" />
                 <div className="bg-transparet h-20 w-20 rounded-br-4xl absolute top-0 right-[80px] z-4 corner-white top-right-corner" />

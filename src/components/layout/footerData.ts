@@ -25,7 +25,7 @@ export const footerLinks = [
     ],
   },
   {
-    title: "Challenges & startups",
+    title: "Startups",
     links: [
       {
         name: "Post a challenges",
