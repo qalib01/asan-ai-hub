@@ -28,7 +28,11 @@ const Home = () => {
             <SimpleSection title="Meet Our Experts" description="Lorem ipsum dolor sit amet consectetur. Purus tincidunt sapien vitae libero malesuada.">
                 {
                     experts.map((expert, idx) => (
-                        <TeamCard expert={expert} idx={idx} />
+                        <TeamCard
+                            key={idx}
+                            expert={expert}
+                            idx={idx}
+                        />
                     ))
                 }
             </SimpleSection>

@@ -19,14 +19,11 @@ const TeamCard = ({ expert, idx }: { expert: IExpert, idx: number }) => {
 
             <ArrowButton position='top-right' />
 
-            <div className="bg-white h-20 w-20 rounded-bl-4xl absolute top-0 right-0 z-4" />
-            <div className="bg-transparet h-20 w-20 rounded-tr-4xl absolute top-[80px] right-0 z-4 corner-white top-right-corner" />
-            <div className="bg-transparet h-20 w-20 rounded-tr-4xl absolute top-0 right-[80px] z-4 corner-white top-right-corner" />
             <div
                 className={`absolute bottom-4 left-4 text-white ${idx !== 1 ? "text-black" : "text-white"}`}
             >
-                <h3 className="text-3xl font-semibold">{expert.first_name} {expert.last_name}</h3>
-                <p className="text-sm">{expert.position}</p>
+                <h3 className="text-3xl font-medium">{expert.first_name} {expert.last_name}</h3>
+                <p className="text-xl">{expert.position}</p>
             </div>
         </div>
     );

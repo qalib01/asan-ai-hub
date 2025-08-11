@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { navLinks } from "./headerData";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const Header: React.FC = () => {
     const [langMenuOpen, setLangMenuOpen] = useState(false);
 
     return (
-        <header className="mx-8">
+        <header className="mx-2 md:mx-8">
             <div className="containex flex items-center justify-between py-10">
                 <Link
                     className="text-[40px] font-bold text-violet-500"
@@ -31,8 +31,9 @@ const Header: React.FC = () => {
                     <button className="p-4 bg-violet-500 text-white rounded-full cursor-pointer">
                         <Search size={16} />
                     </button>
-                    <div onClick={() => setLangMenuOpen(!langMenuOpen)} className="p-3 bg-violet-500 text-white rounded-full text-base cursor-pointer">
-                        EN ▾
+                    <div onClick={() => setLangMenuOpen(!langMenuOpen)} className="p-3 flex items-center bg-violet-500 text-white rounded-full text-base cursor-pointer">
+                        EN
+                        <ChevronDown />
                     </div>
                     <button className="bg-violet-500 hover:bg-violet-600 text-white px-4 py-3 rounded-full text-base cursor-pointer">
                         Get started
@@ -61,11 +62,12 @@ const Header: React.FC = () => {
                         ))}
 
                         <div className="flex items-center space-x-3 pt-4">
-                            <button className="p-4 bg-violet-500 text-white hover:bg-violet-600 rounded-full cursor-pointer">
+                            <button className="p-3 bg-violet-500 text-white rounded-full cursor-pointer">
                                 <Search size={16} />
                             </button>
-                            <div className="p-2 bg-violet-500 hover:bg-violet-600 text-white rounded-full text-xs cursor-pointer">
-                                EN ▾
+                            <div onClick={() => setLangMenuOpen(!langMenuOpen)} className="p-2 flex items-center bg-violet-500 hover:bg-violet-600 text-white rounded-full text-sm cursor-pointer">
+                                EN
+                                <ChevronDown />
                             </div>
                             <button className="bg-violet-500 hover:bg-violet-600 text-white px-4 py-2 rounded-full text-sm cursor-pointer">
                                 Get started
