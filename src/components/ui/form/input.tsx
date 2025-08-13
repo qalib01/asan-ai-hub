@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import cn from 'classnames';
 import { Eye, EyeClosed } from 'lucide-react';
 
+
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     placeholder: string;
     animated?: boolean;
@@ -12,14 +13,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
     ({ placeholder, animated = false, type, className, error, onChange, defaultValue, value, ...rest }, ref) => {
         const [showPassword, setShowPassword] = useState(false);
 
-        const [hasValue, setHasValue] = React.useState(
-            () =>
-                (typeof defaultValue === 'string' && defaultValue.trim().length > 0) ||
-                (typeof value === 'string' && value.trim().length > 0)
-        );
-
         const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-            setHasValue(e.target.value.trim().length > 0);
             onChange?.(e);
         };
 
@@ -57,21 +51,6 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
                 )}
 
                 {error && <p className="text-red-600 text-xs mt-1">{error}</p>}
-                {animated && (
-                    <label
-                        htmlFor={placeholder}
-                        className={cn(
-                            'absolute bg-white cursor-text px-1 transition-all transform origin-left text-slate-400',
-                            {
-                                'peer-focus:-top-2 peer-focus:left-2.5 peer-focus:text-xs peer-focus:scale-90': true,
-                                '-top-2 left-2.5 text-xs scale-90': hasValue,
-                                'left-2.5 top-2.5 text-sm': !hasValue,
-                            }
-                        )}
-                    >
-                        {placeholder}
-                    </label>
-                )}
             </div>
         );
     }
